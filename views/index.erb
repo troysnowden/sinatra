@@ -1,2 +1,9 @@
+<% @name = "Stranger" if @name == ""%>
 <h1>My name is <%= @name %><h1>
-Hello World
+
+
+<form action="/named-cat">
+  <input name="name" type="text">
+  <input type="submit">
+</form>
+
