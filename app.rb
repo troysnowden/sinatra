@@ -2,13 +2,12 @@ require 'sinatra'
 require 'sinatra/reloader'
 
 
-get '/named-cat' do
-  p params
-  @name = params[:name]
+get '/' do
   erb(:index)
 end
 
-get '/random-cat' do
-  @name =  ["Amigo", "Misty", "Almond"][rand(0..2)]
-  erb(:index)
+post '/greeting' do
+  @name = params[:name] == "" ? "Stranger" : params[:name]
+  @sum = params[:first_num].to_i + params[:second_num].to_i
+  erb(:greeting)
 end

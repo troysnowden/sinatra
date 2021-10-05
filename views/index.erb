@@ -1,9 +1,7 @@
-<% @name = "Stranger" if @name == ""%>
-<h1>My name is <%= @name %><h1>
 
-
-<form action="/named-cat">
-  <input name="name" type="text">
+<form action="/greeting" method="POST">
+  <input type="text" name="name"><br>
+  <input type="number" name="first_num"><br>
+  <input type="number" name="second_num">
   <input type="submit">
 </form>
-
